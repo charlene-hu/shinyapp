@@ -9,7 +9,7 @@ library(glmnet)
 options(shiny.trace=TRUE)
 options(shiny.error=traceback)
 options(shiny.error=browser) 
-df <- read.csv("data/seaflow_21min.csv")
+df <- read.csv("data/seaflow.csv")
 set.seed(1)
 trainIndex <- createDataPartition(df$pop, p = .5, list = FALSE, times = 1)
 dfTrain <- df[trainIndex,]
