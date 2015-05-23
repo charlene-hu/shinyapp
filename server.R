@@ -6,9 +6,6 @@ library(e1071)
 library(randomForest)
 library(glmnet)
 
-options(shiny.trace=TRUE)
-options(shiny.error=traceback)
-options(shiny.error=browser) 
 df <- read.csv("data/seaflow.csv")
 set.seed(1)
 trainIndex <- createDataPartition(df$pop, p = .5, list = FALSE, times = 1)
@@ -24,13 +21,23 @@ shinyServer(function(input,output,session)
         df
     })
     
-    output$finalPlotUI = renderPlot({
+    output$PlotUI1 = renderPlot({
         if(is.null(df))
             return()
         a <- ggplot(data = dfTrain, aes(x = pe, y = chl_small, col = pop))
         a <- a + geom_point()
         a <- a + xlab("phycoerythrin fluorescence") + ylab("Forward scatter small") + ggtitle("particles ")
         a
+    })
+    
+    
+    output$PlotUI2 = renderPlot({
+        if(is.null(df))
+            return()
+        b <- ggplot(data = dfTrain, aes(x = pe, y = chl_big, col = pop))
+        b <- b + geom_point()
+        b <- b + xlab("phycoerythrin fluorescence") + ylab("Forward scatter big") + ggtitle("particles ")
+        b
     })
     
     bagging <- reactive({

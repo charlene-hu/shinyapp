@@ -16,7 +16,7 @@ shinyUI(fluidPage(
         tabsetPanel(
             tabPanel("Model Results",h3("Confusion Matrix"),tableOutput("trainResultsUI"),h3("Accuracy"), textOutput("accuracy")),
             tabPanel("Raw Data",dataTableOutput("rawDataView")),
-            tabPanel("Plot",plotOutput("finalPlotUI")),
+            tabPanel("Plot",h3("phycoerythrin fluorescence vs chlorophyll"),plotOutput("PlotUI1"), plotOutput("PlotUI2")),
             tabPanel("About this app", includeHTML("about.html"))
             ,id="mainTabUI"))
     )
