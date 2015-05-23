@@ -4,7 +4,7 @@ library(shinyIncubator);
 shinyUI(fluidPage(
     headerPanel("Classification of Ocean Microbes"),
     sidebarPanel(
-        radioButtons("algo", "Learning Algorithm:",
+        radioButtons("algo", "Model:",
                   c("Bagging" = "bagging",
                     "Random Forest" = "rf",
                     "Support Vector Machine" = "svm")

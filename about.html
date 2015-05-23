@@ -6,10 +6,28 @@
     <title>About</title>
 </head>
 <body>
-    <p>This application lets users compare classification algoroithms on ocean microbes. </p>
-    <p>The raw data tab and plot tab are populated when the application loads. To see the results of an algorithm,
-        first select an algorithm then click on the "Start" button. When an algorithm runs the first time after the application
+    <h3>Data</h3>
+    <p>This application lets users compare classification algoroithms on ocean microbes. The data was from the SeaFlow environmental 
+    flow cytometry instrument. A flow cytometer delivers a flow of particles through capilliary. By shining lasers of different wavelengths 
+    and measuring the absorption and refraction patterns, you can determine how large the particle is and some information about its color 
+    and other properties, allowing you to detect it.</p>
+
+    <p>The technology was developed for medical applciations, where the particles were potential pathogens in, say, serum, and the goal was 
+    to give a diagnosis. But the technology was adapted for use in environmental science to understand microbial population profiles.
+    The data was from SeaFlow environmental flow cytometry instrument. The SeaFlow instrument, developed by the 
+    <a href='http://armbrustlab.ocean.washington.edu/'>Armbrust Lab</a> at the University of Washington, is unique that it is deployed on
+    research vessels and takes continuous measurements of population profiles in the open ocean. 
+    </p>
+    <p>The scale of the data can be quite large, and is expected to grow significantly: A two-week cruise from one vessel can generate 
+    hundreds of gigabytes per day, and the vision is to deploy one of these instruments on not only research vessels but the commercial 
+    shipping fleet as well.</p>
+
+    <p>While there are a number of challenging analytics tasks associated with this data, a central task is classification of particles. 
+    Based on the optical measurements of the particle, it can be identified as one of several populations.</p>
+    <h3>How to use this application</h3>
+    <p>The raw data tab and plot tab are populated when the application loads. To see the results of a model,
+        first select an algorithm then click on the "Start" button. When an model runs the first time after the application
         loads, it will take a while to train and build the model, so please be patient and do not click on "Start" button again 
-        before the algorithm completes.</p>
+        before the model completes.</p>
 </body>
 </html>
