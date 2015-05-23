@@ -26,7 +26,7 @@ shinyServer(function(input,output,session)
             return()
         a <- ggplot(data = dfTrain, aes(x = pe, y = chl_small, col = pop))
         a <- a + geom_point()
-        a <- a + xlab("phycoerythrin fluorescence") + ylab("Forward scatter small") + ggtitle("particles ")
+        a <- a + xlab("phycoerythrin fluorescence") + ylab("chlorophyll - small") + ggtitle("particles ")
         a
     })
     
@@ -36,7 +36,7 @@ shinyServer(function(input,output,session)
             return()
         b <- ggplot(data = dfTrain, aes(x = pe, y = chl_big, col = pop))
         b <- b + geom_point()
-        b <- b + xlab("phycoerythrin fluorescence") + ylab("Forward scatter big") + ggtitle("particles ")
+        b <- b + xlab("phycoerythrin fluorescence") + ylab("chlorophyll - big") + ggtitle("particles ")
         b
     })
     

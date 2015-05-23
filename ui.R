@@ -12,7 +12,7 @@ shinyUI(fluidPage(
         actionButton("runAnalysisUI","Start")
     ),
    
-    mainPanel(progressInit(),        
+    mainPanel(br(), br(), progressInit(),        
         tabsetPanel(
             tabPanel("Model Results",h3("Confusion Matrix"),tableOutput("trainResultsUI"),h3("Accuracy"), textOutput("accuracy")),
             tabPanel("Raw Data",dataTableOutput("rawDataView")),
